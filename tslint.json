@@ -7,12 +7,10 @@
   ],
   "jsRules": {},
   "rules": {
+    "ordered-imports": [true, { "grouped-imports": true }],
     "object-literal-sort-keys": false,
     "jsdoc-format": false,
-    "await-promise": [
-      true,
-      "Bluebird"
-    ],
+    "await-promise": [true, "Bluebird"],
     "interface-name": false,
     "no-console": false
   },
