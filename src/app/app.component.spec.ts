@@ -1,7 +1,10 @@
 import { TestBed } from '@angular/core/testing'
 import { FormsModule } from '@angular/forms'
+import { MockComponent } from 'ng-mocks'
 
 import { AppComponent } from './app.component'
+import { ControlsComponent } from './game/controls/controls.component'
+import { ScreenComponent } from './game/screen/screen.component'
 
 describe('AppComponent', () => {
   let app
@@ -9,7 +12,11 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [FormsModule],
-      declarations: [AppComponent],
+      declarations: [
+        AppComponent,
+        MockComponent(ScreenComponent),
+        MockComponent(ControlsComponent),
+      ],
     }).compileComponents()
 
     fixture = TestBed.createComponent(AppComponent)
